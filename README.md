@@ -15,7 +15,7 @@ This is a custom built distortion-pedal for my electric guitar that incorporates
 ## Circuit design/Schematic
 The fundamental idea of this circuit is to amplify an AC signal, then to clip the signal to generate a distorted tone. This is done in a few stages. 
 
-## Stage 1: Input Band Pass Filter 
+## Stage one: Input Band Pass Filter 
 The AC input must first go through a band pass filter to block out both high and low frequencies. The frequency will "pass" (attenuate with less than -3dB) the signals that are between roughly 34hz to 8khz. This will allow for the normal guitar signal to pass through, while 
 attenuating possible noise. 
 
