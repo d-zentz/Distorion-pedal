@@ -18,15 +18,17 @@ The fundemntal idea of this circut is to amplify a AC signal, then to clip the s
 ##Stage 1: Input Band Pass Filter 
 the AC input must first go through a band pass filter to block out both high and low frequncies. The frequnecy will "pass" (attenuate with less than -3dB) the signals that are between roughly 34hz to 8khz. This will allow for the normal gutair signal to pass through, while 
 attenuating possible noise. 
+
+
 [stage1_input](/images/stage1_input.png)
 
-<br> <br> 
+
 
 ## Stage two, Biasing
 After the signal passes through the band pass filter, the small ac signal (.1v-.5v typically) is then biased to 4.5 volts. This is done by creating a voltage divider with two equal resitors in series attached to a 9 volt battery, resulting in 4.5 volts between the two resistors. This is then attached via a resistor to the non inverting input of the op-amp. 
 [stage2_bias](/images/stage2_bias.png).
 
- <br> <br> 
+  <br> 
  
 ## Stage three, Op-Amp
 The op-amp itself is configured in a inverting setup. This sets gain equal to (1+Rf/RI). RF has an adjustable potentometer, allowing for Rf to be adjusted from 4.7kΩ to 1,004.7kΩ. RI is set at 50kΩ, however the 47nF capacitor prevents the DC signal (4.5V bias) from
