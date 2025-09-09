@@ -29,20 +29,19 @@ After the signal passes through the band pass filter, the small ac signal (.1v-.
  <br> <br> 
  
 ## Stage three, Op-Amp
-The op-amp itself is configured in a inverting setup. This sets gain equal to (1+Rf/RI). RF has an adjustable potentometer, allowing for Rf to be adjusted from 4.7kΩ to
-
-
-The op-amp itself is in a non inverting configuration. An entire picture of the input stages plus the op amp is shown here 
-
-
-
-The last phase of the circut is called the clipping stage as shown here [stage4_clipping](/images/stage4_clipping.png). The first part of this is the decoupling capacitor marked as "C4". This capacitor blocks DC signals and centers the signal around 0 volts.
-
-
-Next the signal is connected to ground via two diodes. These diodes "cut" off voltages above .45 volts and below -.45 volts (the exact cut off voltage varys depending on the exact diode used, as well as other factors). This clipping stage is what actually gives the output the disticn't "distrion" sound.  
+The op-amp itself is configured in a inverting setup. This sets gain equal to (1+Rf/RI). RF has an adjustable potentometer, allowing for Rf to be adjusted from 4.7kΩ to 1,004.7kΩ. RI is set at 50kΩ, however the 47nF capacitor prevents the DC signal (4.5V bias) from
+being amplifed with the AC signal by raising RI to infinity at f = 0hz (DC), making the gain unity. 
 
 [stage3_opamp.png](/images/stage3_opamp.png)
 
+## Stage four, Clipping stage
+After amplifcation, the signal is first passed through a decoupling capacitor labled as "C4", this capacitor blocks DC signals and centeres the signal around 0 volts. After this, two diodes are connected to ground with opposite polaritys. This "clips" any signals that are above or below +/-.45 volts (this exact number depends on the diodes used). This clipping is what acutally creates the "distored" sound. 
+
+[stage4_clipping](/images/stage4_clipping.png). 
+<br>
+<br>
+<br>
+Here is the full schmetaic of this pedal: 
 <br> <br> 
 ![whole_schematic.png](/images/whole_schematic.png) 
 <br> <br>
