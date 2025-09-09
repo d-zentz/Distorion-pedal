@@ -3,6 +3,9 @@
 ## Clean signal 
 Below is a picture on what the clean (by clean we mean undistorted) signal looks like.
 
+![clean_sig](/images/clean_sig_osc.png)
+![clean_sig](/images/clean_sig_sim.png)
+
 
 ## Lightly distorted signal
 These pictures show what the signal looks like when there is a small amount of distortion
